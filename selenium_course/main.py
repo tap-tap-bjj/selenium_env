@@ -31,6 +31,7 @@ def get_item_page(url):
     return item_page
 
 result_json = []
+count_cat = {}
 
 for url_np in get_nav_page(url):
     for url_p in tqdm(get_pagen(url_np), desc=f'Zapolnyaem kartochki iz {url_np}'):
